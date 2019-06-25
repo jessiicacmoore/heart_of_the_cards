@@ -22,9 +22,7 @@ class Deck {
         return -1;
       } else {   
         if (num === undefined) {
-          let card = this.cards[this.cards.length-1];
-          this.cards.pop();
-          return card;
+          return this.cards.splice(this.cards.length - 1)[0];
         } else if (typeof num !== 'number') {
           return;
         } else {
