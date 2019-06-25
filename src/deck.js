@@ -28,11 +28,7 @@ class Deck {
         } else if (typeof num !== 'number') {
           return;
         } else {
-          let drawedCards = []
-          for (let i=0; i<num; i++) {
-            drawedCards.push(this.cards.pop());
-          }
-          return drawedCards;
+          return this.cards.splice(-num).reverse();
         }
       }
     }
