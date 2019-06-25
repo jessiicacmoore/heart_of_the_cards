@@ -7,10 +7,8 @@ class Deck {
     for (let i = 1; i <= 52; i++) {
       this.cards.push(i);
     }
-
-
   }
-
+  
   // Any additional instance methods required by the test suite can be defined below.
   shuffle() {
     this.cards.sort(() => Math.random() - 0.5);
