@@ -8,28 +8,28 @@ class Deck {
       this.cards.push(i);
     }
 
-    
-  }
-  
-  // Any additional instance methods required by the test suite can be defined below.
-    shuffle() {
-      this.cards.sort(() => Math.random() - 0.5);
-      return this.cards;
-    }
 
-    draw (num) {
-      if (this.cards.length === 0) {
-        return -1;
-      } else {   
-        if (num === undefined) {
-          return this.cards.splice(this.cards.length - 1)[0];
-        } else if (typeof num !== 'number') {
-          return;
-        } else {
-          return this.cards.splice(-num).reverse();
-        }
+  }
+
+  // Any additional instance methods required by the test suite can be defined below.
+  shuffle() {
+    this.cards.sort(() => Math.random() - 0.5);
+    return this.cards;
+  }
+
+  draw(num) {
+    if (this.cards.length === 0) {
+      return -1;
+    } else {
+      if (num === undefined) {
+        return this.cards.splice(this.cards.length - 1)[0];
+      } else if (typeof num !== 'number') {
+        return;
+      } else {
+        return this.cards.splice(-num).reverse();
       }
     }
+  }
 }
 
 module.exports = Deck;
